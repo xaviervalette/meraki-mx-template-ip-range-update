@@ -6,7 +6,6 @@ A python script to update, via API, the third byte of /24 subnets generated from
 ![withoutScript](https://user-images.githubusercontent.com/28600326/216713044-c32dfecb-8b0e-42a9-b49f-eaa3adb52f29.png)
 ### With the script
 ![withScript](https://user-images.githubusercontent.com/28600326/216713070-c04f47bf-cbda-40cc-83fb-68eb236c5a20.png)
-
 ## Requirements
 - Meraki Dashboard access
 - Meraki API key
@@ -33,6 +32,8 @@ Now you can run the code by using the following command:
 ```console
 /usr/local/bin/python3.11 <your_workpath>/merakiTemplateIpRangeUpdate/updateTemplateIpRange.py
 ```
+⚠ Using this script will change your VLAN subnets. Thus, it will broke the connectivity of the connected users, so be careful to use it on unused VLANs
+
 The output should be as followed:
 ```console
 VLAN <your_network_vlans> has been updated from <old_subnet> to <new_subnet>
