@@ -34,7 +34,7 @@ NETWORK_ID = "<your_network_id>"
 ```
 ⚠ Using this script will change your VLAN subnets. Thus, it will broke the connectivity of the connected users, so be careful to use it on unused VLANs
 
-### Output
+## Output
 The output should be as followed:
 ```console
 VLAN <your_network_vlans> has been updated from <old_subnet> to <new_subnet>
