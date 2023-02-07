@@ -14,26 +14,27 @@ A python script to update, via API, the third byte of /24 subnets generated from
 - [Configuration template](https://documentation.meraki.com/General_Administration/Templates_and_Config_Sync/Managing_Multiple_Networks_with_Configuration_Templates)
 
 ## Get started
-- Clone or download this repo
-- Add a file called variables.py as follow:
-```
+1. Clone or download this repo
+2. Add a file called variables.py as follow:
+```diff
 └── merakiTemplateIpRangeUpdate/
     ├── functions.py
     ├── merakiTemplateIpRangeUpdate.py
-    └── variables.py (need to be created)
++   └── variables.py
 ```
-In the variables.py file, add the following variables:
+3. In the variables.py file, add the following variables:
 ```python
 #variables.py
 API_KEY = "<your_api_key>"
 NETWORK_ID = "<your_network_id>"
 ```
-Now you can run the code by using the following command:
+4. Now you can run the code by using the following command:
 ```console
 /usr/local/bin/python3.11 <your_workpath>/merakiTemplateIpRangeUpdate/updateTemplateIpRange.py
 ```
 ⚠ Using this script will change your VLAN subnets. Thus, it will broke the connectivity of the connected users, so be careful to use it on unused VLANs
 
+## Output
 The output should be as followed:
 ```console
 VLAN <your_network_vlans> has been updated from <old_subnet> to <new_subnet>
