@@ -18,16 +18,36 @@ A python script to update, via API, the third byte of /24 subnets generated from
 2. Add a file called variables.py as follow:
 ```diff
 └── merakiTemplateIpRangeUpdate/
++   ├── config.yml
     └── src/
          ├── functions.py
-         ├── merakiTemplateIpRangeUpdate.py
-+        └── variables.py
+         └── merakiTemplateIpRangeUpdate.py      
 ```
 3. In the variables.py file, add the following variables:
-```python
-#variables.py
-API_KEY = "<your_api_key>"
-NETWORK_ID = "<your_network_id>"
+```yaml
+#config.yml
+---
+
+# Specify the API key used to authenticate on the Meraki API.
+apiKey: "<yourApiKey>"
+
+networksToBeUpdated:
+  # This is the first network in the list.
+  - networkId: <yourNetworkId1>
+    thirdByte: <yourThirdByte1>
+  
+  # This is the second network in the list.
+  - networkId: <yourNetworkId2>
+    thirdByte: <yourThirdByte2>
+    
+  # [...]
+
+  # This is the Nth network in the list.
+  - networkId: <yourNetworkIdN>
+    thirdByte: <yourThirdByteN>
+
+...
+
 ```
 4. Now you can run the code by using the following command:
 ```console
