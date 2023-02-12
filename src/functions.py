@@ -3,7 +3,7 @@ def updateThirdByteIp(ip, newThirdByte):
     # Split the IP into its 4 bytes
     ipSplit = ip.split(".")
     # Update the third byte
-    ipSplit[2] = newThirdByte
+    ipSplit[2] = str(newThirdByte)
     # Join the 4 bytes back into an IP
     ipUpdated = '.'.join(ipSplit)
     # Return the updated IP
