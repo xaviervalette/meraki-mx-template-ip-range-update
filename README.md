@@ -18,9 +18,10 @@ A python script to update, via API, the third byte of /24 subnets generated from
 2. Add a file called variables.py as follow:
 ```diff
 └── merakiTemplateIpRangeUpdate/
-    ├── functions.py
-    ├── merakiTemplateIpRangeUpdate.py
-+   └── variables.py
+    └── src/
+         ├── functions.py
+         ├── merakiTemplateIpRangeUpdate.py
++        └── variables.py
 ```
 3. In the variables.py file, add the following variables:
 ```python
