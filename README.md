@@ -21,7 +21,8 @@ git clone https://github.com/xaviervalette/meraki-mx-template-ip-range-update
 2. Install required packages
 ```console
 pip3 install -r requirements.txt
-```2. Add a file called config.yml as follow:
+```
+3. Add a file called config.yml as follow:
 ```diff
 └── merakiTemplateIpRangeUpdate/
 +   ├── config.yml
@@ -29,7 +30,7 @@ pip3 install -r requirements.txt
          ├── functions.py
          └── merakiTemplateIpRangeUpdate.py      
 ```
-3. In the config.yml file, add the following variables:
+4. In the config.yml file, add the following variables:
 ```yaml
 #config.yml
 ---
@@ -55,7 +56,7 @@ networksToBeUpdated:
 ...
 
 ```
-4. Now you can run the code by using the following command:
+5. Now you can run the code by using the following command:
 ```console
 python3 src/updateTemplateIpRange.py
 ```
