@@ -15,7 +15,13 @@ A python script to update, via API, the third byte of /24 subnets generated from
 
 ## Get started
 1. Clone or download this repo
-2. Add a file called variables.py as follow:
+```console
+git clone https://github.com/xaviervalette/meraki-mx-template-ip-range-update
+```
+2. Install required packages
+```console
+pip3 install -r requirements.txt
+```2. Add a file called config.yml as follow:
 ```diff
 └── merakiTemplateIpRangeUpdate/
 +   ├── config.yml
@@ -23,7 +29,7 @@ A python script to update, via API, the third byte of /24 subnets generated from
          ├── functions.py
          └── merakiTemplateIpRangeUpdate.py      
 ```
-3. In the variables.py file, add the following variables:
+3. In the config.yml file, add the following variables:
 ```yaml
 #config.yml
 ---
@@ -51,7 +57,7 @@ networksToBeUpdated:
 ```
 4. Now you can run the code by using the following command:
 ```console
-/usr/local/bin/python3.11 <your_workpath>/merakiTemplateIpRangeUpdate/updateTemplateIpRange.py
+python3 src/updateTemplateIpRange.py
 ```
 ⚠ Using this script will change your VLAN subnets. Thus, it will broke the connectivity of the connected users, so be careful to use it on unused VLANs
 
@@ -60,6 +66,7 @@ The output should be as followed:
 ```console
 VLAN <your_network_vlans> has been updated from <old_subnet> to <new_subnet>
 ```
+
 Example:
 ```console
 VLAN 1 has been updated from 10.1.191.0/24 to 10.1.78.0/24

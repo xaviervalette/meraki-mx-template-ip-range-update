@@ -9,7 +9,7 @@ from functions import *
 import yaml
 
 # Open the config.yml file and load its contents into the 'config' variable
-with open('../config.yml', 'r') as file:
+with open('config.yml', 'r') as file:
     config = yaml.safe_load(file)
 
 # Loop through each network defined in the config file
