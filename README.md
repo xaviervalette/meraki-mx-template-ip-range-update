@@ -58,7 +58,7 @@ networksToBeUpdated:
 ```
 5. Now you can run the code by using the following command:
 ```console
-python3 src/updateTemplateIpRange.py
+python3 src/main.py
 ```
 ⚠ Using this script will change your VLAN subnets. Thus, it will broke the connectivity of the connected users, so be careful to use it on unused VLANs
 
